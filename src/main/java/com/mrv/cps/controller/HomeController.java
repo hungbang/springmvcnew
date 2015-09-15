@@ -35,7 +35,7 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		List<CustomerVO> lstCustomerVO = customerService.getLstCustomer();
@@ -47,7 +47,7 @@ public class HomeController {
 		model.addAttribute("dob", lstCustomerVO.get(0).getBirthday());
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home";
+		return "home.tile";
 	}
 	
 	

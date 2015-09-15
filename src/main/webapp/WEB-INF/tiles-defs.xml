@@ -14,7 +14,7 @@
 	
 	<!-- defined a tiles view Home -->
 	<definition name="home.tile" extends="baseLayout">
-		<put-attribute name="tiles" value="HOME"/>
+		<put-attribute name="title" value="HOME"/>
 		<put-attribute name="body" value="/WEB-INF/views/home.jsp"/>
 	</definition>
 </tiles-definitions>
