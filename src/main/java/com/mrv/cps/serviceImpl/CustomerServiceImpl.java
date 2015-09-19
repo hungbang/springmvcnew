@@ -34,4 +34,10 @@ public class CustomerServiceImpl implements CustomerService {
 		return customerDao.getLstCustomer();
 	}
 
+	@Override
+	public List<CustomerVO> getCustomerListForPaging(Integer pageNumber,
+			Integer pageDisplayLength) {
+		return customerDao.getCustomerListForPaging(pageNumber, pageDisplayLength);
+	}
+
 }

@@ -47,7 +47,9 @@ $(document).ready(function() {
 	    "bStateSave": false,
 	    "iDisplayLength": 10,
 	    "iDisplayStart": 0,
-	    "fnDrawCallback": function(){},
+	    "fnDrawCallback": function(){
+	    	alert('Current page number: '+ this.fnPagingInfo().iPage);
+	    },
 	    "sAjaxSource": url,
 	    "oaColums": [
 	      {"mData":"jsonName"},

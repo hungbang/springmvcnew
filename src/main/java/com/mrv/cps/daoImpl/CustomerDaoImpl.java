@@ -3,7 +3,10 @@
  */
 package com.mrv.cps.daoImpl;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.management.Query;
 
 import org.springframework.stereotype.Repository;
 
@@ -28,6 +31,13 @@ public class CustomerDaoImpl extends BaseDAO implements CustomerDAO {
 		List<CustomerVO> lstCustomerVO = jdbcTemplate.query(sqlSelect, new CustomerMapper());
 		
 		return lstCustomerVO;
+	}
+
+	@Override
+	public List<CustomerVO> getCustomerListForPaging(Integer pageNumber,
+			Integer pageDisplayLength) {
+		List<CustomerVO> customerList = new ArrayList<CustomerVO>();
+		return customerList;
 	}
 
 }

@@ -67,10 +67,8 @@ public class HomeController {
 		String searchParameter = req.getParameter("sSeach");
 		Integer pageDisplayLength = Integer.valueOf(req.getParameter("iDisplayLength"));
 		
-		List<CustomerVO> customerList =  customerService.getLstCustomer();
-		
-		
-		
+		//List<CustomerVO> customerList =  customerService.getLstCustomer();
+		List<CustomerVO> customerList = customerService.getCustomerListForPaging(pageNumber, pageDisplayLength);
 		CustomerJsonObject customerJsonObject = new CustomerJsonObject();
 		customerJsonObject.setiTotalRecords(500);
 		customerJsonObject.setiTotalDisplayRecords(500);
