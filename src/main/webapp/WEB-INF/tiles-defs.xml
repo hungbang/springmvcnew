@@ -17,4 +17,9 @@
 		<put-attribute name="title" value="HOME"/>
 		<put-attribute name="body" value="/WEB-INF/views/home.jsp"/>
 	</definition>
+	<!-- defined a table layout -->
+	<definition name="table.tile" extends="baseLayout">
+	   <put-attribute name="title" value="Table"/>
+	   <put-attribute name="body" value="/WEB-INF/views/customize.jsp"/>
+	</definition>
 </tiles-definitions>

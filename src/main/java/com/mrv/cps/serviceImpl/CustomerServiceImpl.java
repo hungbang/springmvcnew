@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
 import com.mrv.cps.dao.CustomerDAO;
@@ -29,14 +30,14 @@ public class CustomerServiceImpl implements CustomerService {
 	private CustomerDAO customerDao;
 	
 	@Override
-	public List<CustomerVO> getLstCustomer() {
+	public List<CustomerVO> getLstCustomer() throws DataAccessException{
 		
 		return customerDao.getLstCustomer();
 	}
 
 	@Override
 	public List<CustomerVO> getCustomerListForPaging(Integer pageNumber,
-			Integer pageDisplayLength) {
+			Integer pageDisplayLength) throws DataAccessException{
 		return customerDao.getCustomerListForPaging(pageNumber, pageDisplayLength);
 	}
 

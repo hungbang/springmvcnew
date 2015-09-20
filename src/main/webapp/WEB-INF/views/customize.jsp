@@ -4,20 +4,17 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <form:form action="" method="GET">
   <div class="table-responsive">
-         <table id="tblCustomer" class="table table-hover display">
+         <table id="tblCustomer" class="display">
           <thead>
             <tr>
-              <th>Name</th>
+              <th>Customer ID</th>
+              <th>Customer Name</th>
               <th>BirthDay</th>
               <th>Email</th>
               <th>Address</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td></td>
-            </tr>
-          </tbody>
+
          </table>
   </div>
 </form:form>
@@ -39,24 +36,26 @@
 };
 
 $(document).ready(function() {
-  var url = "";
+  var url = "dataCustomer";
   $('#tblCustomer').dataTable({
-	  "bProcessing": true,
-	    "bServerSide": true,
-	    "sort": "position",
-	    "bStateSave": false,
-	    "iDisplayLength": 10,
-	    "iDisplayStart": 0,
-	    "fnDrawCallback": function(){
-	    	alert('Current page number: '+ this.fnPagingInfo().iPage);
-	    },
-	    "sAjaxSource": url,
-	    "oaColums": [
-	      {"mData":"jsonName"},
-	      {"mData": "jsonBirthDay"},
-	      {"mData": "jsonEmail"},
-	      {"mData": "jsonAddress"},
-	    ]
+      "bProcessing": true,
+        "bServerSide": true,
+        "sort": "position",
+        "bStateSave": false,
+        "iDisplayLength": 10,
+        "iDisplayStart": 0,
+        "fnDrawCallback": function(){
+            //alert('Current page number: '+ this.fnPagingInfo().iPage);
+        },
+        "sAjaxSource": url,
+        "columns": [
+          {"data": "customerId"},
+          {"data":"customerName"},
+          {"data": "birthday"},
+          {"data": "email"},
+          {"data": "address"}
+
+        ]
   });
 });
 </script>

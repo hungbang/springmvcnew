@@ -14,11 +14,11 @@
 <script type="text/javascript" src="<c:url value="/resources/js/jquery-1.11.3.js"/> "></script>
 <script src="<c:url value="/resources/bootstrap/3.3.5/js/bootstrap.min.js" />"></script>
 <!--DataTables CSS -->
-<link rel="stylesheet" type="text/css" href="/resources/DataTables-1.10.9/media/css/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="<c:url value="/resources/DataTables-1.10.9/media/css/jquery.dataTables.css"/>">
 <!-- jQuery -->
-<script type="text/javascript" charset="utf8" src="/resources/DataTables-1.10.9/media/js/jquery.js"></script>
+<script type="text/javascript" charset="utf8" src="<c:url value="/resources/DataTables-1.10.9/media/js/jquery.js"/>"></script>
 <!-- DataTables -->
-<script type="text/javascript" charset="utf8" src="/resources/DataTables-1.10.9/media/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="<c:url value="/resources/DataTables-1.10.9/media/js/jquery.dataTables.js"/>"></script>
 
 <title>
     <tiles:insertAttribute name="tiles" ignore="true"></tiles:insertAttribute>

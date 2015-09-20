@@ -5,6 +5,8 @@ package com.mrv.cps.dao;
 
 import java.util.List;
 
+import org.springframework.dao.DataAccessException;
+
 import com.mrv.cps.vo.CustomerVO;
 
 /**
@@ -12,6 +14,6 @@ import com.mrv.cps.vo.CustomerVO;
  *
  */
 public interface CustomerDAO {
-	public List<CustomerVO> getLstCustomer();
-	public List<CustomerVO> getCustomerListForPaging(Integer pageNumber, Integer pageDisplayLength);
+	public List<CustomerVO> getLstCustomer() throws DataAccessException;
+	public List<CustomerVO> getCustomerListForPaging(Integer pageNumber, Integer pageDisplayLength) throws DataAccessException;
 }
