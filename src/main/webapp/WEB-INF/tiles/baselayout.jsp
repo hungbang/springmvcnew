@@ -13,6 +13,9 @@
 <script src="<c:url value="/resources/js/jquery-1.9.1.js" />"></script>
 <script type="text/javascript" src="<c:url value="/resources/js/jquery-1.11.3.js"/> "></script>
 <script src="<c:url value="/resources/bootstrap/3.3.5/js/bootstrap.min.js" />"></script>
+<!-- <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script> -->
 <!--DataTables CSS -->
 <link rel="stylesheet" type="text/css" href="<c:url value="/resources/DataTables-1.10.9/media/css/jquery.dataTables.css"/>">
 <!-- jQuery -->
@@ -42,5 +45,9 @@
             <tiles:insertAttribute name="footer"/>
         </div>
     </div>
+    <script type="text/javascript" charset="utf8" src="<c:url value="/resources/angularjs/app.js"/>"></script>
+    <script type="text/javascript" charset="utf8" src="<c:url value="/resources/angularjs/employee_service.js"/>"></script>
+	<script type="text/javascript" charset="utf8" src="<c:url value="/resources/angularjs/app_controller.js"/>"></script>
+    
 </body>
 </html>

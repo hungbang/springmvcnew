@@ -41,4 +41,10 @@ public class CustomerServiceImpl implements CustomerService {
 		return customerDao.getCustomerListForPaging(pageNumber, pageDisplayLength);
 	}
 
+	@Override
+	public Integer getTotalRecord() throws DataAccessException {
+		
+		return customerDao.getTotalRecord();
+	}
+
 }

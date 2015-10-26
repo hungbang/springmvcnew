@@ -63,4 +63,13 @@ public class CustomerDaoImpl extends BaseDAO implements CustomerDAO {
 		return customerList;
 	}
 
+	@Override
+	public Integer getTotalRecord() throws DataAccessException{
+		logger.info("get total record for paging from db");
+		Integer totalRecord = 0;
+		String sql = "select count(*) from customers";
+		totalRecord = jdbcTemplate.queryForObject(sql, Integer.class);
+		return totalRecord;
+	}
+
 }

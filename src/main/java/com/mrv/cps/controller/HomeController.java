@@ -72,8 +72,18 @@ public class HomeController {
 		
 		return "table.tile";
 	}
-		
+	@RequestMapping(value="/employee", method= RequestMethod.GET)	
+	public String employee(Locale locale, Model model){
+		logger.info("employee management function");
+		return "employee.tile";
+	}
 	
+	/**
+	 * @author hungbang
+	 * @param req
+	 * @return json
+	 * @throws IOException
+	 */
 	@RequestMapping(value = "/dataCustomer", method = RequestMethod.GET, produces = "application/json")
 	public @ResponseBody
 	String getDataForTable(HttpServletRequest req)
@@ -120,15 +130,22 @@ public class HomeController {
 			}
 		}
 		CustomerJsonObject customerJsonObject = new CustomerJsonObject();
-		customerJsonObject.setiTotalRecords(500);
-		customerJsonObject.setiTotalDisplayRecords(500);
+		Integer totalRecord = 0;
+		totalRecord = customerService.getTotalRecord();
+		customerJsonObject.setiTotalRecords(totalRecord);
+		customerJsonObject.setiTotalDisplayRecords(totalRecord);
 		customerJsonObject.setAaData(customerList);
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		String json2 = gson.toJson(customerJsonObject);
 		logger.info("this is json string: "+ json2);
 		return json2;
 	}
-
+	/**
+	 * @author hungbang
+	 * @param searchParameter
+	 * @param customerList
+	 * @return List<CustomerVO>
+	 */
 	private List<CustomerVO> getListBasedOnSearchParameter(
 			String searchParameter, List<CustomerVO> customerList) {
 		logger.info("4444444444::: "+ searchParameter);
@@ -155,4 +172,7 @@ public class HomeController {
 		}
 		return customerList;
 	}
+	
+	
+	
 }

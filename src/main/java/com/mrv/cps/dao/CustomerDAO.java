@@ -16,4 +16,5 @@ import com.mrv.cps.vo.CustomerVO;
 public interface CustomerDAO {
 	public List<CustomerVO> getLstCustomer() throws DataAccessException;
 	public List<CustomerVO> getCustomerListForPaging(Integer pageNumber, Integer pageDisplayLength) throws DataAccessException;
+	public Integer getTotalRecord();
 }

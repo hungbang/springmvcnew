@@ -18,4 +18,5 @@ public interface CustomerService {
 
 	public List<CustomerVO> getCustomerListForPaging(Integer pageNumber,
 			Integer pageDisplayLength) throws DataAccessException;
+	public Integer getTotalRecord() throws DataAccessException;
 }
