@@ -63,7 +63,7 @@ body, .form-control{
 									<div class="form-group col-md-12">
 										<label class="col-md-2 control-label" for="file">Name</label>
 										<div class="col-md-7">
-											<input type="text" ng-model="ctrl.employee.employee_name" name="ename" class="employeename form-control input-sm" placeholder="Enter your name:" required ng-minlength="3" >
+											<input type="text" ng-model="ctrl.employee.employeeName" name="ename" class="employeename form-control input-sm" placeholder="Enter your name:" required ng-minlength="3" >
 										</div>
 										<div class="has-error" ng-show="myForm.$dirty">
 											<span ng-show="myForm.ename.$error.required">This is required field</span>
@@ -123,7 +123,7 @@ body, .form-control{
 			  			<tbody>
 			  				<tr ng-repeat="e in ctrl.employees track by $index">
 			  					<td><span ng-bind="e.id"></span></td>
-			  					<td> <span ng-bind="e.employee_name"></span> </td>
+			  					<td> <span ng-bind="e.employeeName"></span> </td>
 			  					<td> <span ng-bind="e.email"></span> </td>
 			  					<td> <span ng-bind="e.address" ></span> </td>
 			  					<td>

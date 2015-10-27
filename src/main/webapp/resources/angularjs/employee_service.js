@@ -16,7 +16,7 @@ App.factory('EmployeeService', ['$http','$q', function($http, $q){
 				);
 		},
 
-		createEmployee: function(user){
+		createEmployee: function(employee){
 			return $http.post('http://localhost:8080/cps/employee/', employee).then(
 				function(res){
 					return res.data;
