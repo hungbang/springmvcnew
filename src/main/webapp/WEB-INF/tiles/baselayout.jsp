@@ -48,6 +48,7 @@
     <script type="text/javascript" charset="utf8" src="<c:url value="/resources/angularjs/app.js"/>"></script>
     <script type="text/javascript" charset="utf8" src="<c:url value="/resources/angularjs/employee_service.js"/>"></script>
 	<script type="text/javascript" charset="utf8" src="<c:url value="/resources/angularjs/app_controller.js"/>"></script>
+	<script type="text/javascript" charset="utf8" src="<c:url value="/resources/angularjs/product_controller.js"/>"></script>
     
 </body>
 </html>
