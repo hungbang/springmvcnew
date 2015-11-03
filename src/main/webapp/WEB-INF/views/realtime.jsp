@@ -11,7 +11,10 @@
 		<div class="list-group-item" ng-repeat="product in prodCtrl.products">
 			<h3>{{product.productName}}<em class="pull-right">{{product.price | currency}}</em> </h3>
 			<div ng-controller="GalleryController as gallery" ng-show="product.images.length">
-				
+				<div class="img-wrap">
+					<img ng-src="{{product.images(gallery.)}}">
+
+				</div>
 			</div>
 		</div>
 		

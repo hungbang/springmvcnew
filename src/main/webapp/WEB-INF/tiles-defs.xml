@@ -32,4 +32,9 @@
 		<put-attribute name="title" value="Real Time With Angular JS and Spring Mvc"/>
 		<put-attribute name="body" value="/WEB-INF/views/realtime.jsp"/>
 	</definition>
+	<!-- defined a upc information page -->
+	<definition name="upcinformation.tile" extends="baseLayout">
+		<put-attribute name="title" value="Upc Information Data Grid"/>
+		<put-attribute name="body" value="/WEB-INF/views/upcinformation.jsp"/>
+	</definition>
 </tiles-definitions>
