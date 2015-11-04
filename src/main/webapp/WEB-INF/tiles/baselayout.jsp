@@ -49,6 +49,9 @@
     <script type="text/javascript" charset="utf8" src="<c:url value="/resources/angularjs/employee_service.js"/>"></script>
 	<script type="text/javascript" charset="utf8" src="<c:url value="/resources/angularjs/app_controller.js"/>"></script>
 	<script type="text/javascript" charset="utf8" src="<c:url value="/resources/angularjs/product_controller.js"/>"></script>
+	<script type="text/javascript" charset="utf8" src="<c:url value="/resources/angularjs/upc_controller.js"/>"></script>
+	<script type="text/javascript" charset="utf8" src="<c:url value="/resources/angularjs/realtime_controller.js"/>"></script>
+	<script type="text/javascript" charset="utf8" src="<c:url value="/resources/angularjs/upc_service.js"/>"></script>
     <script type="text/javascript" charset="utf8" src="<c:url value="/resources/js/app-script.js"/>"></script>
 </body>
 </html>
