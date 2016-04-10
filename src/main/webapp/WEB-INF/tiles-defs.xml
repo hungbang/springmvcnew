@@ -7,9 +7,13 @@
 	<definition name="baseLayout" template="/WEB-INF/tiles/baselayout.jsp">
 		<put-attribute name="title" value="Template"/>
 		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp"/>
-		<put-attribute name="menu" value="/WEB-INF/tiles/menu.jsp"/>
+		
+		
+		<put-attribute name="stylecss" value="/WEB-INF/tiles/_stylescss.jsp" />  
+       <put-attribute name="scripts" value="/WEB-INF/tiles/_scripts.jsp" />
+		<!-- <put-attribute name="menu" value="/WEB-INF/tiles/menu.jsp" /> -->
 		<put-attribute name="body" value=""/>
-		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"/>
+		<!-- <put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"/> -->
 	</definition>
 	
 	<!-- defined a tiles view Home -->
@@ -18,23 +22,36 @@
 		<put-attribute name="body" value="/WEB-INF/views/home.jsp"/>
 	</definition>
 	<!-- defined a table layout -->
-	<definition name="table.tile" extends="baseLayout">
+	<!-- <definition name="table.tile" extends="baseLayout">
 	   <put-attribute name="title" value="Table"/>
 	   <put-attribute name="body" value="/WEB-INF/views/customize.jsp"/>
-	</definition>
+	</definition> -->
 	<!-- defined a employee layout -->
-	<definition name="employee.tile" extends="baseLayout">
+	<!-- <definition name="employee.tile" extends="baseLayout">
 		<put-attribute name="title" value="Employee Management"/>
 		<put-attribute name="body" value="/WEB-INF/views/employee.jsp"/>
-	</definition>
+	</definition> -->
 	<!-- defined a real time page-->
-	<definition name="realtime.tile" extends="baseLayout">
+	<!-- <definition name="realtime.tile" extends="baseLayout">
 		<put-attribute name="title" value="Real Time With Angular JS and Spring Mvc"/>
 		<put-attribute name="body" value="/WEB-INF/views/realtime.jsp"/>
-	</definition>
+	</definition> -->
 	<!-- defined a upc information page -->
-	<definition name="upcinformation.tile" extends="baseLayout">
+	<!-- <definition name="upcinformation.tile" extends="baseLayout">
 		<put-attribute name="title" value="Upc Information Data Grid"/>
 		<put-attribute name="body" value="/WEB-INF/views/upcinformation.jsp"/>
+	</definition> -->
+	<!-- defined demo -->
+	<definition name="getAllAccount.tile" extends="baseLayout">
+		<put-attribute name="title" value=" All Account"/>
+		<put-attribute name="body" value="/WEB-INF/views/getAllAccount.jsp"/>
+	</definition>
+	<definition name="selectUser.tile" extends="baseLayout">
+		<put-attribute name="title" value="select"/>
+		<put-attribute name="body" value="/WEB-INF/views/selectUser.jsp"/>
+	</definition>
+	<definition name="login.tile" extends="baseLayout">
+		<put-attribute name="title" value="login account"/>
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp"/>
 	</definition>
 </tiles-definitions>
